@@ -1,0 +1,48 @@
+{
+  "pngCommands": [
+    [
+      "lualatex",
+      "-interaction=nonstopmode",
+      "tmp.tex"
+    ],
+    [
+      "pdfcrop",
+      "tmp.pdf",
+      "tmp-cropped.pdf"
+    ],
+    [
+      "pdftoppm",
+      "tmp-cropped.pdf",
+      "-png",
+      "-r",
+      "250",
+      "-singlefile",
+      "tmp"
+    ]
+  ],
+  "svgCommands": [
+    [
+      "lualatex",
+      "-interaction=nonstopmode",
+      "tmp.tex"
+    ],
+    [
+      "pdfcrop",
+      "tmp.pdf",
+      "tmp-cropped.pdf"
+    ],
+    [
+      "pdf2svg",
+      "tmp-cropped.pdf",
+      "tmp-unscaled.svg"
+    ],
+    [
+      "rsvg-convert",
+      "--zoom=2",
+      "--format=svg",
+      "tmp-unscaled.svg",
+      "-o",
+      "tmp.svg"
+    ]
+  ]
+}

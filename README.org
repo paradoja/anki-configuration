@@ -1,0 +1,50 @@
+#+title: Anki conf optons
+
+Some basic Anki configuration I use.
+
+* Card configuration
+Cards should include [[file:style.css][styles]]:
+#+begin_src web
+<style>
+  @import url("_style.css");
+</style>
+#+end_src
+
+They should also include the [[localizer.js][localizer]] script for language decks (a bit horrible for now). This requires some code to be able to work on Android.
+
+#+begin_src web
+<script>
+globalThis.deck = "{{Deck}}".split("::");
+globalThis.tags = "{{Tags}}".split(" ");
+onUpdateHook.push(function() {
+var prefix = globalThis.ankiPlatform === "desktop" ?
+    "" :
+    globalThis.AnkiDroidJS ?
+    "https://appassets.androidplatform.net/" :
+    ".";
+var script = document.createElement('script');
+script.src = `${prefix}_localizer.js`;
+script.async = false;
+document.head.appendChild(script);
+document.head.removeChild(script);
+})
+</script>
+#+end_src
+
+The script will fill in placeholders such as this one and a few corner cases.
+#+begin_src web
+<span id="vocabulary:passive" class="auto card-type">Vocabulary passive</span><br>
+#+end_src
+
+Both are expected to be in the =collection/media= directory of the session collection. A comfortable way of doing it is cloning this repo and hard linking (to names starting with =_=):
+
+#+begin_src sh
+cd ~/.local/anki/share/Anki2/SESSION_NAME
+ln PATH_TO_REPO/localizer.js _localizer.js
+ln PATH_TO_REPO/style.css _style.css
+#+end_src
+
+* Latex configuration
+Using the "[[https://ankiweb.net/shared/info/937148547][Edit Latex Build Process]]" add-on we adapt it. Luatex well configured and functioning in the system is required (as are the packages used).
+
+Latex headers (Note types → Options) are [[file:anki.tex][here]], while the latex build process is [[file:latex-build-process-conf.json][here]].
