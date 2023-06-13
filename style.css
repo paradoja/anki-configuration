@@ -6,6 +6,10 @@
     background-color: white;
 }
 
+.category {
+    display: flex;
+}
+
 .card-type {
     font-style: italic;
     font-size: smaller;
@@ -14,15 +18,18 @@
     padding: 5px;
     display: inline-block;
     margin-bottom: 1em;
+    order: 1;
+    display: block;
 }
 
 .word-type {
     font-size: smaller;
     text-decoration: underline;
     padding: 5px;
-    display: inline-block;
     margin-bottom: 1em;
     margin-left: 1em;
+    order: 2;
+    display: block;
 }
 
 #type\:active.word-type {
@@ -3033,7 +3040,7 @@ dt {
 /* table */
 
 table {
-    margin: 1em auto;
+    margin: 1em 0;
     border-top: 2px solid;
     border-bottom: 2px solid;
     border-collapse: collapse;

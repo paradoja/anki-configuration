@@ -2,7 +2,7 @@ function update () {
   let t11n = {"Deutsch": { vocabulary: {passive: "Vokabular", active: "vocabulario", image: "✏"},
                            expression: {passive: "Ausdrück", active: "expresión", image: "👭"},
                            pronunciation: {passive: "Aussprache", active: "pronunciación", image: "🗣"},
-                           fillInTheBlanks: {passive: "Fülle die Lüken aus, zum Thema", image: "⎁"},
+                           fillInTheBlanks: {passive: "Fülle die Lüken aus", topic:", zum Thema", image: "⎁"},
                            translation: {passive: "den Satz übersetz", active: "traduce la frase", image: "💱"}}};
   const grammar = {"Deutsch": { general: { passive: "Grammatik", active: "gramática"},
                                 vocabulary: {passive: "Grammatik - Vokabular", active: "gramática - vocabulario", image: "🔧"}}};
@@ -24,7 +24,9 @@ function update () {
   for (const [category, fields] of Object.entries(t11n[globalThis.deck[0]])) {
     for (const [fName, fValue] of Object.entries(fields)) {
       let element = document.getElementById(`${category}:${fName}`);
-      if (element) element.innerHTML = `<span class="field-image">${fields.image}</span> ${fValue}`;
+      var value = fValue;
+      if (["passive", "active"].includes(fName)) value = `<span class="field-image">${fields.image}</span> ${value}`;
+      if (element) element.innerHTML = value;
     }
   }
 }
