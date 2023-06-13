@@ -16,6 +16,19 @@
     margin-bottom: 1em;
 }
 
+.word-type {
+    font-size: smaller;
+    text-decoration: underline;
+    padding: 5px;
+    display: inline-block;
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+#type\:active.word-type {
+    font-style: italic;
+}
+
 .field-image {
     color: grey;
 }
