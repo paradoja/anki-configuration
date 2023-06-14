@@ -8,6 +8,7 @@
 
 .category {
     display: flex;
+    margin-bottom: 1em;
 }
 
 .card-type {
@@ -16,20 +17,21 @@
     border-radius: 10px;
     border: 1px solid;
     padding: 5px;
-    display: inline-block;
-    margin-bottom: 1em;
     order: 1;
-    display: block;
+    display: inline-flex;
 }
 
 .word-type {
     font-size: smaller;
     text-decoration: underline;
-    padding: 5px;
-    margin-bottom: 1em;
     margin-left: 1em;
+    padding-top: 5px;
     order: 2;
-    display: block;
+    display: inline-flex;
+}
+
+.word-type p {
+    margin: 0;
 }
 
 #type\:active.word-type {
