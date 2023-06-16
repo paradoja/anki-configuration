@@ -24,8 +24,8 @@
 .word-type {
     font-size: smaller;
     text-decoration: underline;
-    margin-left: 1em;
     padding-top: 5px;
+    margin-left: 1em;
     order: 2;
     display: inline-flex;
 }
@@ -42,7 +42,7 @@
     color: grey;
 }
 
-.first-line {
+.first-line, .second-line {
     position: relative;
     display: flex;
 }
