@@ -3,10 +3,12 @@ function update () {
                            expression: {passive: "Ausdrück", active: "expresión", image: "👭"},
                            pronunciation: {passive: "Aussprache", active: "pronunciación", image: "🗣"},
                            fillInTheBlanks: {passive: "Fülle die Lüken aus", topic:", zum Thema", image: "⎁"},
-                           translation: {passive: "den Satz übersetz", active: "traduce la frase", image: "💱"}}};
+                           translation: {passive: "den Satz übersetz", active: "traduce la frase", image: "💱"},
+                           rewrite: {passive: "den Satz umformulieren", active: "den Satz umformulieren", image: "✍"}}};
   const grammar = {"Deutsch": { general: { passive: "Grammatik", active: "gramática"},
                                 vocabulary: {passive: "Grammatik - Vokabular", active: "gramática - vocabulario", image: "🔧"}}};
-  const is_grammar = globalThis.tags.includes("type_grammar"); const is_translation = globalThis.tags.includes("type_translation");
+
+  const is_grammar = globalThis.tags.includes("type_grammar");
   if (is_grammar) {
     Object.assign(t11n, grammar);
     let elements = document.getElementsByClassName("area");
@@ -17,8 +19,11 @@ function update () {
         first.innerHTML = `<span class="area">${grammar[globalThis.deck[0]]["general"]["passive"]}</span>${first.innerHTML}`;
     }
   }
+
+  const is_translation = globalThis.tags.includes("type_translation"); const is_rewrite = globalThis.tags.includes("type_rewrite");
   const optionals = Array.from(document.getElementsByClassName("optional"));
   if (is_translation) { optionals.forEach(e => e.id = e.id.replace("optional", "translation")); }
+  else if (is_rewrite) { optionals.forEach(e => e.id = e.id.replace("optional", "rewrite")); }
   else if (optionals) { optionals.forEach(e => e.remove()); }
 
   for (const [category, fields] of Object.entries(t11n[globalThis.deck[0]])) {

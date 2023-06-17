@@ -21,6 +21,10 @@
     display: inline-flex;
 }
 
+.card-type p {
+    margin: 0;
+}
+
 .word-type {
     font-size: smaller;
     text-decoration: underline;
@@ -40,6 +44,7 @@
 
 .field-image {
     color: grey;
+    margin-right: 3px;
 }
 
 .first-line, .second-line {
@@ -53,6 +58,13 @@
     margin-left: 2em;
     font-style: italic;
     text-decoration: underline;
+}
+
+.area-intype {
+    text-decoration: underline;
+    margin-left: 0.5em;
+    padding-left: 0.5em;
+    border-left: 1px solid;
 }
 
 .notes {
