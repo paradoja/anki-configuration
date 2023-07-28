@@ -76,6 +76,16 @@
     display: inline-block;
 }
 
+
+.definition {
+    margin: 1em 2em;
+    padding-left: 1em;
+    border-left: 3px solid #008b8b;
+}
+.definition p, .definition ol, .definition ul, .definition dl {
+    font-size: x-small;
+}
+
 /* Generated from (org-html-htmlize-generate-css) with minimum
 packages loaded and default light theme */
 
