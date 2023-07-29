@@ -77,11 +77,15 @@
 }
 
 
-.definition {
+.definition, .inline-notes {
     margin: 1em 2em;
     padding-left: 1em;
+}
+
+.definition {
     border-left: 3px solid #008b8b;
 }
+
 .definition p, .definition ol, .definition ul, .definition dl {
     font-size: x-small;
 }
@@ -92,6 +96,12 @@
 
 .definition dd {
     font-style: italic;
+}
+
+.inline-notes::before {
+    content: "➤";
+    position: absolute;
+    left: 1em;
 }
 
 /* Generated from (org-html-htmlize-generate-css) with minimum
