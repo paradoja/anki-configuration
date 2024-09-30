@@ -1,12 +1,36 @@
 function update () {
-  let t11n = {"Deutsch": { vocabulary: {passive: "Vokabular", active: "vocabulario", image: "✏"},
-                           expression: {passive: "Ausdrück", active: "expresión", image: "👭"},
-                           pronunciation: {passive: "Aussprache", active: "pronunciación", image: "🗣"},
-                           fillInTheBlanks: {passive: "Fülle die Lüken aus", topic:", zum Thema", image: "⎁"},
-                           translation: {passive: "den Satz übersetz", active: "traduce la frase", image: "💱"},
-                           rewrite: {passive: "den Satz umformulieren", active: "den Satz umformulieren", image: "✍"}}};
-  const grammar = {"Deutsch": { general: { passive: "Grammatik", active: "gramática"},
-                                vocabulary: {passive: "Grammatik - Vokabular", active: "gramática - vocabulario", image: "🔧"}}};
+  const t11n = {"Deutsch":
+                { vocabulary: {passive: "Vokabular", active: "vocabulario", image: "✏"},
+                  expression: {passive: "Ausdrück", active: "expresión", image: "👭"},
+                  pronunciation: {passive: "Aussprache", active: "pronunciación", image: "🗣"},
+                  fillInTheBlanks: {passive: "Fülle die Lüken aus", topic:", zum Thema", image: "⎁"},
+                  translation: {passive: "den Satz übersetz", active: "traduce la frase", image: "💱"},
+                  rewrite: {passive: "den Satz umformulieren", active: "den Satz umformulieren", image: "✍"}},
+                "Булгарски":
+                { vocabulary: {passive: "речников", active: "vocabulario", image: "✏"},
+                  expression: {passive: "", active: "", image: "👭"},
+                  pronunciation: {passive: "", active: "", image: "🗣"},
+                  fillInTheBlanks: {passive: "", topic:"", image: "⎁"},
+                  translation: {passive: "", active: "", image: "💱"},
+                  rewrite: {passive: "", active: "", image: "✍"}},
+                "Português":
+                { vocabulary: {passive: "vocabulário", active: "vocabulario", image: "✏"},
+                  expression: {passive: "", active: "", image: "👭"},
+                  pronunciation: {passive: "", active: "", image: "🗣"},
+                  fillInTheBlanks: {passive: "", topic:"", image: "⎁"},
+                  translation: {passive: "", active: "", image: "💱"},
+                  rewrite: {passive: "", active: "", image: "✍"}}
+               };
+  const grammar = {"Deutsch":
+                   { general: { passive: "Grammatik", active: "gramática"},
+                     vocabulary: {passive: "Grammatik - Vokabular", active: "gramática - vocabulario", image: "🔧"}},
+                   "Булгарски":
+                   { general: { passive: "граматика", active: "gramática"},
+                     vocabulary: {passive: "граматика - речников", active: "gramática - vocabulario", image: "🔧"}},
+                   "Português":
+                   { general: { passive: "gramática", active: "gramática"},
+                     vocabulary: {passive: "gramática - vocabulário", active: "gramática - vocabulario", image: "🔧"}}
+                  };
 
   const is_grammar = globalThis.tags.includes("type_grammar");
   if (is_grammar) {

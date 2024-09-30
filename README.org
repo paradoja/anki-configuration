@@ -39,7 +39,7 @@ The script will fill in placeholders such as this one and a few corner cases.
 Both are expected to be in the =collection/media= directory of the session collection. A comfortable way of doing it is cloning this repo and hard linking (to names starting with =_=):
 
 #+begin_src sh
-cd ~/.local/anki/share/Anki2/SESSION_NAME
+cd ~/.local/share/Anki2/SESSION_NAME
 ln PATH_TO_REPO/localizer.js _localizer.js
 ln PATH_TO_REPO/style.css _style.css
 #+end_src
