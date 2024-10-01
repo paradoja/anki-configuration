@@ -15,12 +15,33 @@
     font-style: italic;
     font-size: smaller;
     border-radius: 10px;
-    border: 1px solid;
+    border: 1px solid #008b8b;
     padding: 5px;
     order: 1;
     display: inline-flex;
 }
 
+/* Tech  */
+
+.topic {
+    font-size: smaller;
+    text-decoration: underline;
+    padding-top: 5px;
+    color: #008b8b;
+
+    margin-left: 0.5em;
+    padding-left: 0.5em;
+    border-left: 1px solid #008b8b;
+}
+
+.topic:first-of-type {
+    margin-left: 0em;
+    border-left: 0px;
+    padding-left: 0em;
+}
+
+
+/* Languages */
 .card-type p {
     margin: 0;
 }
@@ -75,7 +96,6 @@
     width: 100%;
     display: inline-block;
 }
-
 
 .definition, .inline-notes {
     margin: 1em 2em;
@@ -3250,13 +3270,22 @@ p.verse {
 }
 
 :not(pre) > code {
-    padding: 2px 5px;
-    margin: auto 1px;
-    border: 1px solid #DDD;
+    padding: 2px 4px;
+    /* margin: auto 1px; */
+    /* border: 1px solid #DDD; */
+    border: 0px;
     border-radius: 3px;
     background-clip: padding-box;
-    color: #333;
     font-size: $code-size;
+    font-size: 80%;
+    line-height: 2;
+    color: #333;
+    background-color: #030303;
+}
+
+.nightMode :not(pre) > code {
+    color: #333;
+    background-color: #b3b3b3;
 }
 
 .org-src-container {
@@ -3264,6 +3293,7 @@ p.verse {
     box-shadow: 3px 3px 3px #eee;
     font-family: $monospace;
     font-size: $code-size;
+    font-size: 80%;
     margin: 1em auto;
     padding: 0.1em 0.5em;
     position: relative;
@@ -3284,6 +3314,7 @@ p.verse {
     border: 0;
     color: white;
     font-size: $code-size;
+    font-size: 80%;
 }
 
 /* from http://demo.thi.ng/org-spec/ */

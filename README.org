@@ -16,6 +16,7 @@ They should also include the [[localizer.js][localizer]] script for language dec
 <script>
 globalThis.deck = "{{Deck}}".split("::");
 globalThis.tags = "{{Tags}}".split(" ");
+
 onUpdateHook.push(function() {
 var prefix = globalThis.ankiPlatform === "desktop" ?
     "" :
