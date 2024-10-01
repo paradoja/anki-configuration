@@ -1,7 +1,11 @@
 function update () {
   const tagsToRemove = ['aws', 'tech', 'saa_c03'];
   const tagTransformations =
-        { 'fundamentals': 'fundamentals' };
+        { 'fundamentals': 'Fundamentals',
+          'organizations': 'Organizations',
+          'cloudtrail': 'CloudTrail',
+          'controltower': 'Control Tower'
+        };
   const transformTag = tag => tagTransformations[tag] || tag.toUpperCase();
   const addTopic = tag => `<span class="topic">${tag}</span>`;
 
