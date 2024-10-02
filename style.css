@@ -3578,6 +3578,10 @@ p.verse {
     color: blue;
 }
 
+.cloze[data-cloze] b, .cloze .cloze b {
+    font-weight: bolder;
+}
+
 .nightMode .cloze[data-cloze], .nightMode .cloze .cloze {
     color: lightblue;
 }

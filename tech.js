@@ -4,7 +4,9 @@ function update () {
         { 'fundamentals': 'Fundamentals',
           'organizations': 'Organizations',
           'cloudtrail': 'CloudTrail',
-          'controltower': 'Control Tower'
+          'controltower': 'Control Tower',
+          'cw_logs': 'CW-Logs',
+          'cloudtrail': 'CloudTrail'
         };
   const transformTag = tag => tagTransformations[tag] || tag.toUpperCase();
   const addTopic = tag => `<span class="topic">${tag}</span>`;
