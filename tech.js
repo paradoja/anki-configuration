@@ -6,7 +6,8 @@ function update () {
           'cloudtrail': 'CloudTrail',
           'controltower': 'Control Tower',
           'cw_logs': 'CW-Logs',
-          'cloudtrail': 'CloudTrail'
+          'cloudtrail': 'CloudTrail',
+          'eventbridge': 'EventBridge'
         };
   const transformTag = tag => tagTransformations[tag] || tag.toUpperCase();
   const addTopic = tag => `<span class="topic">${tag}</span>`;
