@@ -5,7 +5,7 @@ function update () {
           'organizations': 'Organizations',
           'cloudtrail': 'CloudTrail',
           'controltower': 'Control Tower',
-          'cw_logs': 'CW-Logs',
+          'cwlogs': 'CW Logs',
           'cloudtrail': 'CloudTrail',
           'eventbridge': 'EventBridge'
         };
