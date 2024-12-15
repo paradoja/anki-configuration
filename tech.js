@@ -1,14 +1,16 @@
-function update () {
+function update() {
   const tagsToRemove = ['aws', 'tech', 'saa_c03'];
   const tagTransformations =
-        { 'fundamentals': 'Fundamentals',
-          'organizations': 'Organizations',
-          'cloudtrail': 'CloudTrail',
-          'controltower': 'Control Tower',
-          'cwlogs': 'CW Logs',
-          'cloudtrail': 'CloudTrail',
-          'eventbridge': 'EventBridge'
-        };
+  {
+    'fundamentals': 'Fundamentals',
+    'organizations': 'Organizations',
+    'cloudtrail': 'CloudTrail',
+    'controltower': 'Control Tower',
+    'cwlogs': 'CW Logs',
+    'cloudtrail': 'CloudTrail',
+    'eventbridge': 'EventBridge',
+    'aurora': 'Aurora'
+  };
   const transformTag = tag => tagTransformations[tag] || tag.toUpperCase();
   const addTopic = tag => `<span class="topic">${tag}</span>`;
 
