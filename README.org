@@ -49,3 +49,12 @@ ln PATH_TO_REPO/style.css _style.css
 Using the "[[https://ankiweb.net/shared/info/937148547][Edit Latex Build Process]]" add-on we adapt it. Luatex well configured and functioning in the system is required (as are the packages used).
 
 Latex headers (Note types → Options) are [[file:anki.tex][here]], while the latex build process is [[file:latex-build-process-conf.json][here]].
+* Anki add-ons
+- [[https://ankiweb.net/shared/info/874215009][Advanced Browser]] - 874215009
+- [[https://ankiweb.net/shared/info/817108664][Anki Simulator]] -  817108664
+- [[https://ankiweb.net/shared/info/2055492159][AnkiConnect]] - 2055492159
+- [[https://ankiweb.net/shared/info/31746032][AnkiWebView Inspector]] - 31746032
+- [[https://ankiweb.net/shared/info/291119185][Batch Editing]] - 291119185
+- [[https://ankiweb.net/shared/info/937148547][Edit LaTeX build process]] - 937148547
+- [[https://ankiweb.net/shared/info/759844606][FSRS Helper]] - 759844606
+- [[https://ankiweb.net/shared/info/738807903][More Overview Stats 2.1]] - 738807903
