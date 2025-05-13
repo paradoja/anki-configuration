@@ -27,7 +27,7 @@
       "tmp.tex"
     ],
     [
-      "pdf-crop",
+      "pdfcrop",
       "tmp.pdf",
       "tmp-cropped.pdf"
     ],
