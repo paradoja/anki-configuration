@@ -8,7 +8,7 @@ function update () {
                   rewrite: {passive: "den Satz umformulieren", active: "den Satz umformulieren", image: "✍"}},
                 "Булгарски":
                 { vocabulary: {passive: "речников", active: "vocabulario", image: "✏"},
-                  expression: {passive: "", active: "", image: "👭"},
+                  expression: {passive: "expressão", active: "expresión", image: "👭"},
                   pronunciation: {passive: "", active: "", image: "🗣"},
                   fillInTheBlanks: {passive: "", topic:"", image: "⎁"},
                   translation: {passive: "", active: "", image: "💱"},
